@@ -5,6 +5,7 @@ import { styled, keyframes } from '@mui/system';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import { useNavigate } from "react-router-dom";
 
 import productsData from '../data/productsData';
 import { useCart } from '../context/CartContext'; // <--- Importa useCart
@@ -141,6 +142,10 @@ const ProductCard = styled(Card)(({ theme }) => ({
 }));
 
 
+  
+
+
+
 function HomePage() {
   const { addToCart } = useCart(); // <--- Obtén la función addToCart del contexto
 
@@ -169,6 +174,12 @@ function HomePage() {
     addToCart(productId);
     alert(`Producto agregado al carrito!`); // Puedes cambiar esto por un Toast o Snackbar de Material UI
   };
+
+  const navigate = useNavigate();
+
+  const verTodosProductos =() =>{
+    navigate('/productos');
+  }
 
   return (
     <Box>
@@ -251,7 +262,7 @@ function HomePage() {
             ))}
           </Grid>
           <Box sx={{ marginTop: 6, display: 'flex', justifyContent: 'center' }}>
-            <Button variant="outlined" color="primary" size="large" href="/productos">
+            <Button variant="outlined" color="primary" size="large" onClick={verTodosProductos}>
               Ver Todos los Productos
             </Button>
           </Box>
