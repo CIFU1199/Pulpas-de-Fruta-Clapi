@@ -24,8 +24,8 @@ function Navbar() {
         {/* Botones de navegación */}
         <Button color="inherit" component={Link} to="/">Inicio</Button>
         <Button color="inherit" component={Link} to="/productos">Productos</Button>
-        <Button color="inherit" component={Link} to="/nosotros">Nosotros</Button>
-        <Button color="inherit" component={Link} to="/contacto">Contacto</Button>
+        {/*<Button color="inherit" component={Link} to="/nosotros">Nosotros</Button>*/}
+        {/*<Button color="inherit" component={Link} to="/contacto">Contacto</Button>*/}
 
         {/* Botones de acción derecha (Login/Registro y Carrito) */}
         <Box sx={{ marginLeft: 2 }}>
