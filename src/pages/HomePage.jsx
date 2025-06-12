@@ -193,7 +193,7 @@ function HomePage() {
             <Typography variant="h6" component="p" sx={{ animation: `${fadeIn} 1.5s ease-out forwards`, animationDelay: '0.5s', opacity: 0 }}>
               Descubre nuestras pulpas 100% naturales, llenas de sabor tropical y sin conservantes.
             </Typography>
-            <HeroButton variant="contained" href="/productos">
+            <HeroButton variant="contained" onClick={verTodosProductos}>
               Explora Nuestras Pulpas
             </HeroButton>
           </HeroContent>
